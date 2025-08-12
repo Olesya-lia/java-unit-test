@@ -6,18 +6,17 @@ public class CheckIsAdultTest {
 
   public CheckIsAdultTest(int age, boolean result) {
 	this.age = age;
-    this.result = result; // Инициализируй поля класса в конструкторе
+    this.result = result;
   }
 
-@Parameterized.Parameters // Пометь метод аннотацией для параметров
+@Parameterized.Parameters
   public static Object[][] getTextData() {
 	return new Object[][] {
 		{18, true},
         {21,true},
         {25, true},
         {28, true},
-         // Заполни массив тестовыми данными и ожидаемым результатом
-    };
+             };
   }
 
   @Test
